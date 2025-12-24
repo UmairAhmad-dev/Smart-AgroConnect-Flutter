@@ -1,0 +1,85 @@
+name: smart_landlord_app
+description: "Smart AgroConnect - Precision farming application"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  # The SDK constraint is compatible with your new Flutter version (3.38.4)
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+    # ... (other dependencies)
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.1.10
+  # --------------------
+  # STATE MANAGEMENT
+  # --------------------
+  provider: ^6.1.5
+
+  # --------------------
+  # FIREBASE & BACKEND
+  # --------------------
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.10.0
+  google_sign_in: ^6.3.0
+  cloud_firestore: ^4.10.0
+  firebase_database: ^10.5.7
+  firebase_messaging: ^14.6.9
+  firebase_storage: ^11.2.6
+
+  # --------------------
+  # NETWORKING & API
+  # --------------------
+  http: ^1.6.0
+
+  # --------------------
+  # UI & STYLING
+  # --------------------
+  cupertino_icons: ^1.0.8
+  font_awesome_flutter: ^10.12.0
+  flutter_staggered_grid_view: ^0.7.0
+  fl_chart: ^0.68.0 # <--- FINAL FIX: Updated to a compatible version (was 0.60.0)
+  getwidget: ^7.0.0
+  page_transition: ^2.2.1
+  flutter_form_builder: ^10.2.0
+  form_builder_validators: ^11.2.0
+  google_fonts: ^6.3.3
+
+  # --------------------
+  # MEDIA HANDLING
+  # --------------------
+  image_picker: ^1.2.1
+  cached_network_image: ^3.3.1
+
+  # --------------------
+  # GEOLOCATION & UTILS
+  # --------------------
+  geolocator: ^11.0.0
+  logger: ^1.4.0
+  intl: ^0.20.2
+  uuid: ^4.5.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Asset paths based on your structure (lib/assets)
+  assets:
+    - lib/assets/images/logo.png
+    - lib/assets/model.tflite
+    - lib/assets/dict.txt
+
+  # CORRECTED FONT PATH: uses 'fonts/' plural, based on your project structure
+  fonts:
+    - family: WeatherIcons
+      fonts:
+        - asset: fonts/weathericons-regular-webfont.ttf
+
+# NOTE: The dependency_overrides block has been REMOVED as it is no longer needed.
